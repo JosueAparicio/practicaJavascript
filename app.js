@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", e=>{
             window.localStorage.setItem("nombre "+codigo, nombre);
             window.localStorage.setItem("direccion "+codigo, direccion);
             window.localStorage.setItem("telefono "+codigo, telefono);
+
+            alert("Datos Guardados con exito.");
+
+            limpiar();
+
+
           //SE LE AÑADE UN IDENTIFICADOR A CADA CLAVE, EN ESTE CASO ESE IDENTIFICADOR ES EL CODIGO YA QUE NO SE PUEDE REPETIR
           //ASI CADA CLAVE SERA DIFERENTE 
         
@@ -31,11 +37,14 @@ document.addEventListener("DOMContentLoaded", e=>{
         if(document.querySelector("#txtCodigoAlumno").Value = !"" ){
             TraerDatos();
 
+        } else {
+            alert("Introduzca un codigo de usuario para buscar.");
+        }
+        
         //LUEGO PREGUNTAMOS SI LA CAJA DE TEXTO QUE CONTIENE EL CODIGO NO ESTÁ VACIA. 
         //Y AL DARLE CLICK AL BOTON RECUPERAR TRAERA LOS VALORES QUE ESTEN ASOCIADOS AL CODIGO
         //Y PARA ELLO GUARDAMOS EL VALOR QUE HAY EN LA CAJA DE TEXTO DEL CODIGO 
         //Y SE LO CONCATENAMOS A LAS DEMAS CLAVES PARA ASI TRAER A LOS DATOS CORRESPONDIENTES
-        }
     
     });
 
@@ -46,6 +55,18 @@ document.addEventListener("DOMContentLoaded", e=>{
         document.querySelector("#txtTelefonoAlumno").value = window.localStorage.getItem("telefono "+traer);
     }
 
+    function limpiar(){
+        document.querySelector("#txtCodigoAlumno").value= "";
+        document.querySelector("#txtNombreAlumno").value = "";
+        document.querySelector("#txtDireccionAlumno").value = "";
+        document.querySelector("#txtTelefonoAlumno").value = "";
+    }
+
+    document.querySelector("#btnLimpiar").addEventListener("click", event=>{
+        limpiar();
+
+
+    });
 });
 
 // JOSUE ISAAC APARICIO DÍAZ USIS028518

@@ -2,6 +2,8 @@ body{
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 10px;
+    background: #164e6e;
+}
 }
 
 input{
@@ -41,17 +43,22 @@ input[type=tel]:valid{
     color: black;
 }
 .contenedorTotal{
-    padding: 30dpx;
+    padding: 30px;
     border-radius: 20px;
     margin: auto;
     margin-top: 100px;
-    background: rgb(34, 1, 87);
+    background: #24303c;
     width: 400px;
 }
- .contenedorTotal .fila{
+ .contenedorTotal .controles{
     padding: 10px;
- width: 100%;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
 }
 .encabezado{
-    margin-top: 20px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
 }
