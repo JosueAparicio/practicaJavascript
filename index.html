@@ -4,37 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro Estudiantes</title>
-    <link rel="stylesheet" href="ztilos.css">
-</head> 
-<body>
-    <section class="contenedorTotal">
-    <h1 class="encabezado" >REGISTRAR ESTUDIANTE</h1>
-    <form name="frmAlumnos" id="frmAlumnos" method="get">
-        <div class="container">
-            <div class="fila">
-                <input type="text"  class="controles" id="txtCodigoAlumno" 
-                    required="required" placeholder="codigo" pattern="^[A-Z]{4}[0-9]{6}">
-            </div>
-            <div class="fila">
-                <input type="text" class="controles" id="txtNombreAlumno" required="required" 
-                    placeholder="Nombre" pattern="[a-zA-ZñÑ ]{3,65}">
-            </div>
-            <div class="fila">
-                <input type="text" class="controles" id="txtDireccionAlumno" required="required" placeholder="Direccion" >
-            </div>
-            <div class="fila">
-                <input type="text" class="controles" id="txtTelefonoAlumno" required="required" 
-                    placeholder="Telefono" pattern="[0-9]{4}-[0-9]{4}">
-            </div>
-            <div class="fila">
-                <input type="submit" class="controles" value="Guardar">
-                <input type="button"  class="controles" id="btnRecuperarAlumno" value="Recuperar">
-                <input type="button"  class="controles" id="btnLimpiar" value="Limpiar">
-            </div>
-        </div>
-    </form>
+    <title>Parcial</title>
     <script src="app.js"></script>
-</section>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></head> 
+<body>
+
+    <form class="ContenedorTotal">
+
+        <H1>CONVERSOR DE DIVISAS</H1>
+
+        <SELEct id="cboDivisasDe"> DE: 
+            <option value="dolar"></option>
+            <option value="colones"></option>
+            <option value="yenes"></option>
+            <option value="rupia"></option>
+            <option value="lempira"></option>
+            <option value="peso mx"></option>
+            <option value="bitcoin"></option>
+
+        </SELEct>
+
+    </form>
+
 </body>
 </html>
