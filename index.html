@@ -5,26 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Parcial</title>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></head> 
+    <script src="app.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head> 
 <body>
+    <div class="container">
 
-    <form class="ContenedorTotal">
+        <form id="frmConversores">
+            <div class="row row-cols-4 p-2">
+                <div class="col text-center bg-info text-white">
+                    Conversor de Divisas
+                </div>
+               
+            </div>
+            <div class="row row-cols-4 p-2">
+                <div class="col">
+                    DE: <select name="" id="cboDe" class="form-control">
+                        <option value="Dolar">Dolar</option>
+                        <option value="Colon">Euro</option>
+                        <option value="Yenes">Yenes</option>
+                        <option value="Rupia">Rupia</option>
+                        <option value="Lempira">Lempira</option>
+                        <option value="Peso mx">Peso mx</option>
+                        <option value="Bitcoin">Bitcoin</option>
 
-        <H1>CONVERSOR DE DIVISAS</H1>
 
-        <SELEct id="cboDivisasDe"> DE: 
-            <option value="dolar"></option>
-            <option value="colones"></option>
-            <option value="yenes"></option>
-            <option value="rupia"></option>
-            <option value="lempira"></option>
-            <option value="peso mx"></option>
-            <option value="bitcoin"></option>
 
-        </SELEct>
+                    </select>
+                </div>
+                <div class="col">
+                   A: <select name="" id="cboA" class="form-control">
+                    <option value="Dolar">Dolar</option>
+                    <option value="Colon">Euro</option>
+                    <option value="Yenes">Yenes</option>
+                    <option value="Rupia">Rupia</option>
+                    <option value="Lempira">Lempira</option>
+                    <option value="Peso mx">Peso mx</option>
+                    <option value="Bitcoin">Bitcoin</option>
+                    </select>
+                </div>
 
-    </form>
+            </div>
+            <div class="row row-cols-4 p-2">
+                <div class="col text-center">
+                    <input type="text" required="required" pattern="[0-9.]{1,}" placeholder="cantidad" id="txtCantidadConversores" class="form-control">
+                </div>
+                <div class="col text-center">
+                    <p class="bg-success text-white" id="lblRespuesta">Respuesta: ?</p>
+                </div>
+            </div>
+            <div class="row row-cols-2">
+                <div class="col text-center"><input type="button" id="btnConvertirMoneda" value="Convertir" onclick="monedas()"></div>
+            </div>
+
+        </form>
+
+    </div>
+  
 
 </body>
 </html>
