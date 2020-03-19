@@ -1,11 +1,10 @@
 var $ = el => document.querySelector(el);
 document.addEventListener("DOMContentLoaded", event => {
    
-    let mAlumnos = document.getElementById("alumnos");
-    let mDocentes = document.getElementById("docentes");
+    let mAlumnos = document.getElementById("alumnos"); // Instanciamos los elementos
+    let mDocentes = document.getElementById("docentes"); //
 
-
-
+    //SE AGREGAN LOS EVENTOS LISTENER PARA CADA VISTA
     mAlumnos.addEventListener("click", e=>{
         e.stopPropagation();
         let modulo = "alumnos";
@@ -34,6 +33,8 @@ document.addEventListener("DOMContentLoaded", event => {
 
   */
 }); 
+
+// ESTA FUNCION HACE LA PETICION Y COLOCA LA VISTA SEGUN EL MODULO QUE SE LE HA SIFO ENVIADO
  function colocarVista(modulo){
 
     fetch(`public/vistas/${modulo}/${modulo}.html`).then( resp => resp.text()).then( resp => {
