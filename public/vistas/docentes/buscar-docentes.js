@@ -43,8 +43,8 @@ export function modulo(){
 
                     if (confirmacion == true){
                         eliminarDocente( e.srcElement.parentNode.parentNode.dataset.iddocente );
-                        alert("Registro eliminado correctamente");
                     }
+                    else{}
                     
                 } else {
                     modificarDocente( JSON.parse(e.srcElement.parentNode.dataset.docente) );

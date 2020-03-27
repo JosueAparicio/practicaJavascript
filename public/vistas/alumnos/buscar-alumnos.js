@@ -37,14 +37,13 @@ export function modulo(){
             $("#tbl-buscar-alumnos > tbody").addEventListener("click",e=>{
                 if( e.srcElement.parentNode.dataset.alumno==null ){
 
-                    let confirmacion = confirm(`Se eliminará este registro: `);
-                    eliminarAlumno( e.srcElement.parentNode.parentNode.dataset.idalumno );
-
-                    if (confirmacion == true){
-                        alert("Registro eliminado correctamente");
+                    let confirmacion = confirm("Se eliminará el registro"); 
+    
+                   if (confirmacion == true){
+                         eliminarAlumno( e.srcElement.parentNode.parentNode.dataset.idalumno );
                     }
+                    else{}
 
-                    
                 } else {
                     modificarAlumno( JSON.parse(e.srcElement.parentNode.dataset.alumno) );
                 }
