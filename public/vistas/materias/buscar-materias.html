@@ -25,11 +25,11 @@
                 </thead>
                 <tbody>
                     <tr v-for="catedra in mismaterias" :key="catedra.idMateria"
-                        v-on:click="modificarMateria(catedra)">
-                        <td>{{ catedra.codigo }}</td>
-                        <td>{{ catedra.nombre }}</td>
-                        <td>{{ catedra.ciclo }}</td>
-                        <td>
+                        >
+                        <td v-on:click="modificarMateria(catedra)">{{ catedra.codigo }}</td>
+                        <td v-on:click="modificarMateria(catedra)">{{ catedra.nombre }}</td>
+                        <td v-on:click="modificarMateria(catedra)">{{ catedra.ciclo }}</td>
+                        <td >
                             <input v-on:click="eliminarMateria(catedra.idMateria)" type="button" 
                                 class="btn btn-outline-danger text-white" value="del">
                         </td>

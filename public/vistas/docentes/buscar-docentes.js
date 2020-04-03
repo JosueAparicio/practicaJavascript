@@ -21,6 +21,7 @@ var appBuscarDocentes = new Vue({
             if (confirmacion == true){
                 fetch(`private/Modulos/docentes/procesos.php?proceso=eliminarDocente&docente=${idDocente}`).then(resp=>resp.json()).then(resp=>{
                     this.buscarDocente();
+
                 });
             }
 

@@ -25,12 +25,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="profe in misdocentes" :key="profe.idDocente" v-on:click="modificarDocente(profe)">
-                        <td>{{ profe.codigo }}</td>
-                        <td>{{ profe.nombre }}</td>
-                        <td>{{ profe.direccion }}</td>
-                        <td>{{ profe.dui }}</td>
-                        <td>{{ profe.telefono }}</td>
+                    <tr v-for="profe in misdocentes" :key="profe.idDocente">
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.codigo }}</td>
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.nombre }}</td>
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.direccion }}</td>
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.dui }}</td>
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.telefono }}</td>
                         <td>
                             <input v-on:click="eliminarDocente(profe.idDocente)" type="button" class="btn btn-outline-danger text-white" value="del">
                         </td>

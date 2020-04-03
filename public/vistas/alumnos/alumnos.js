@@ -23,6 +23,12 @@ var appalumno = new Vue({
                 this.alumno.accion = 'nuevo';
                 appBuscarAlumnos.buscarAlumno();
             });
+        },
+
+        nuevoValor: function(){
+            this.alumno.accion= 'nuevo';
+
         }
+
     }
 });
